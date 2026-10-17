@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toronto Mice Express | Fast-Response Rodent Defense & Exclusion</title>
+    <meta name="description" content="Toronto's premier rapid-response mice exclusion specialists. Thermal diagnostics, steel mesh sealing, non-toxic extraction, and guaranteed protection.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        expressyellow: {
+                            50: '#fefce8',
+                            100: '#fef9c3',
+                            200: '#fef08a',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                            800: '#854d0e',
+                            900: '#713f12',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Yellow & White Glassmorphism & Apple Motion Styling -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafafa;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Styling */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(254, 240, 138, 0.8);
+            box-shadow: 0 20px 40px -15px rgba(234, 179, 8, 0.12);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(254, 240, 138, 0.6);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 25px 50px -12px rgba(202, 138, 4, 0.22);
+            border-color: rgba(234, 179, 8, 0.8);
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(254, 240, 138, 0.8);
+        }
+
+        /* Yellow Ambient Glow Elements */
+        .ambient-glow-yellow-1 {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(254, 240, 138, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+            top: -150px;
+            right: -150px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .ambient-glow-yellow-2 {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(254, 249, 195, 0.7) 0%, rgba(255, 255, 255, 0) 70%);
+            bottom: 5%;
+            left: -150px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Apple-Inspired Keyframe Animations */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-14px) rotate(0.8deg); }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.03); }
+        }
+
+        .animate-float {
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+
+        .animate-pulse-glow {
+            animation: pulseGlow 3.5s ease-in-out infinite;
+        }
+
+        /* Active Navigation Link State */
+        .nav-link.active {
+            color: #ca8a04;
+            font-weight: 700;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2.5px;
+            background: #eab308;
+            border-radius: 4px;
+            margin-top: 3px;
+        }
+
+        /* Accordion transition logic */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+        }
+        .accordion-content.active {
+            max-height: 1200px;
+            transition: max-height 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col relative bg-slate-50 text-slate-900 antialiased selection:bg-expressyellow-200 selection:text-expressyellow-900">
+
+    <!-- Ambient Yellow Lighting Effects -->
+    <div class="ambient-glow-yellow-1"></div>
+    <div class="ambient-glow-yellow-2"></div>
+
+    <!-- Header Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-nav transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-expressyellow-600 via-expressyellow-500 to-amber-400 flex items-center justify-center text-slate-950 shadow-lg shadow-expressyellow-500/30 group-hover:scale-105 transition-transform duration-300 font-extrabold">
+                        <i class="fa-solid fa-bolt text-xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-black text-xl tracking-tight text-slate-900 group-hover:text-expressyellow-600 transition-colors">Toronto Mice Express</span>
+                        <span class="text-[10px] font-bold text-expressyellow-700 tracking-widest uppercase">Rapid Exclusion & Prevention</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-sm font-medium text-slate-600 hover:text-expressyellow-600 transition-colors py-1">Home</a>
+                    <a href="#services" class="nav-link text-sm font-medium text-slate-600 hover:text-expressyellow-600 transition-colors py-1">Services</a>
+                    <a href="#about" class="nav-link text-sm font-medium text-slate-600 hover:text-expressyellow-600 transition-colors py-1">About Us</a>
+                    <a href="#blog" class="nav-link text-sm font-medium text-slate-600 hover:text-expressyellow-600 transition-colors py-1">Blog</a>
+                    <a href="#contact" class="nav-link text-sm font-medium text-slate-600 hover:text-expressyellow-600 transition-colors py-1">Contact</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-expressyellow-500 hover:bg-expressyellow-600 text-slate-950 text-sm font-black transition-all duration-300 shadow-md shadow-expressyellow-500/20 hover:shadow-expressyellow-500/40 active:scale-95">
+                        <i class="fa-solid fa-truck-fast mr-2 text-xs"></i> Rapid Dispatch
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex md:hidden">
+                    <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="p-2.5 rounded-xl text-slate-700 hover:text-expressyellow-600 hover:bg-expressyellow-50 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-b border-expressyellow-200 bg-white/95 backdrop-blur-xl px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-nav-item block px-4 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-expressyellow-50 hover:text-expressyellow-700">Home</a>
+            <a href="#services" class="mobile-nav-item block px-4 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-expressyellow-50 hover:text-expressyellow-700">Services</a>
+            <a href="#about" class="mobile-nav-item block px-4 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-expressyellow-50 hover:text-expressyellow-700">About Us</a>
+            <a href="#blog" class="mobile-nav-item block px-4 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-expressyellow-50 hover:text-expressyellow-700">Blog</a>
+            <a href="#contact" class="mobile-nav-item block px-4 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-expressyellow-50 hover:text-expressyellow-700">Contact</a>
+            <div class="pt-2">
+                <a href="#contact" class="mobile-nav-item w-full flex items-center justify-center px-5 py-3 rounded-xl bg-expressyellow-500 text-slate-950 font-black text-center">
+                    Request Emergency Inspection
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN DYNAMIC CONTENT ROUTER -->
+    <main class="flex-grow">
+        
+        <!-- ================= PAGE 1: HOME PAGE ================= -->
+        <section id="page-home" class="page-section">
+            <!-- Hero Section -->
+            <div class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <!-- Hero Text Content -->
+                        <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                            <div class="inline-flex items-center px-4 py-2 rounded-full glass-panel border border-expressyellow-300 shadow-sm text-expressyellow-800 text-xs font-extrabold uppercase tracking-wider">
+                                <span class="w-2.5 h-2.5 rounded-full bg-expressyellow-500 animate-ping mr-2"></span>
+                                Fast 24-Hour Emergency Dispatch Across GTA
+                            </div>
+                            
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.12]">
+                                Express <span class="bg-gradient-to-r from-expressyellow-600 via-amber-500 to-yellow-500 bg-clip-text text-transparent">Mice Exclusion</span> & Thermal Building Protection
+                            </h1>
+                            
+                            <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                                Toronto's high-speed rodent defense team. We utilize thermal infrared leak detection, heavy stainless steel mesh sealing, and non-toxic extraction for permanent peace of mind.
+                            </p>
+                            
+                            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-expressyellow-500 hover:bg-expressyellow-600 text-slate-950 font-black text-base shadow-xl shadow-expressyellow-500/30 hover:shadow-expressyellow-500/50 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 text-center">
+                                    Request Express Inspection <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                                </a>
+                                <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-full glass-panel hover:bg-white text-slate-800 font-bold text-base border border-expressyellow-300 transition-all duration-300 text-center">
+                                    Explore Packages
+                                </a>
+                            </div>
+
+                            <!-- Trust Badges Grid -->
+                            <div class="pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
+                                <div class="text-center lg:text-left">
+                                    <div class="font-black text-2xl text-slate-900">100%</div>
+                                    <div class="text-xs text-slate-500 font-semibold">Steel Mesh Seal</div>
+                                </div>
+                                <div class="text-center lg:text-left">
+                                    <div class="font-black text-2xl text-slate-900">Same-Day</div>
+                                    <div class="text-xs text-slate-500 font-semibold">Priority Booking</div>
+                                </div>
+                                <div class="text-center lg:text-left">
+                                    <div class="font-black text-2xl text-slate-900">Non-Toxic</div>
+                                    <div class="text-xs text-slate-500 font-semibold">Child & Pet Safe</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hero Vector SVG Graphic -->
+                        <div class="lg:col-span-5 relative">
+                            <div class="relative mx-auto max-w-md lg:max-w-none">
+                                <div class="glass-panel p-8 rounded-3xl relative z-10 shadow-2xl border border-white/90 animate-float">
+                                    <!-- Custom Vector Yellow Shield Illustration -->
+                                    <svg class="w-full h-auto max-h-80 mx-auto drop-shadow-xl" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="400" height="320" rx="24" fill="url(#express_bg_linear)"/>
+                                        <!-- Outer Yellow Shield -->
+                                        <path d="M200 40L310 90V185C310 250 200 290 200 290C200 290 90 250 90 185V90L200 40Z" fill="#EAB308" fill-opacity="0.1" stroke="#CA8A04" stroke-width="4.5" stroke-linejoin="round"/>
+                                        <!-- Inner Gold Crest -->
+                                        <path d="M200 65L285 105V175C285 225 200 260 200 260C200 260 115 225 115 175V105L200 65Z" fill="url(#express_shield_grad)"/>
+                                        <!-- Speed Bolt Symbol -->
+                                        <path d="M210 100L155 180H195L185 240L245 160H205L210 100Z" fill="#0F172A" fill-opacity="0.9"/>
+                                        <!-- Checkmark Badge -->
+                                        <circle cx="200" cy="245" r="24" fill="#FFFFFF"/>
+                                        <path d="M190 245L197 252L212 237" stroke="#CA8A04" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <defs>
+                                            <linearGradient id="express_bg_linear" x1="0" y1="0" x2="400" y2="320" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#FEFCE8"/>
+                                                <stop offset="1" stop-color="#FFFFFF"/>
+                                            </linearGradient>
+                                            <linearGradient id="express_shield_grad" x1="115" y1="65" x2="285" y2="260" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#FACC15"/>
+                                                <stop offset="1" stop-color="#CA8A04"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <div class="mt-6 text-center">
+                                        <span class="inline-block px-3 py-1 bg-expressyellow-100 text-expressyellow-900 rounded-full text-xs font-black tracking-wide">GUARANTEED STRUCTURAL SEAL</span>
+                                        <h3 class="text-lg font-bold text-slate-900 mt-2">Express Rodent Exclusion System</h3>
+                                        <p class="text-xs text-slate-500 mt-1">Infrared Diagnostics • Stainless Weep Hole Covers • Bio-Sanitized</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="py-16 bg-white/80 relative border-y border-expressyellow-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <h2 class="text-xs font-extrabold tracking-widest uppercase text-expressyellow-700">Why Choose Toronto Mice Express</h2>
+                        <p class="text-3xl font-black text-slate-900 sm:text-4xl mt-2">Precision Engineering Meets Fast Action</p>
+                        <p class="text-slate-600 mt-4 text-base">We combine thermal infrared diagnostics, heavy-duty mechanical exclusion barriers, and bio-sanitization to protect your property permanently.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="glass-card p-8 rounded-3xl relative">
+                            <div class="w-14 h-14 rounded-2xl bg-expressyellow-100 text-expressyellow-700 flex items-center justify-center text-2xl mb-6 shadow-inner">
+                                <i class="fa-solid fa-crosshairs"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Thermal Infrared Leak Scans</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Instantly locate structural heat leaks, concealed rodent runways, and moisture pockets behind drywall and insulation without invasive tearing.
+                            </p>
+                        </div>
+
+                        <div class="glass-card p-8 rounded-3xl relative">
+                            <div class="w-14 h-14 rounded-2xl bg-expressyellow-100 text-expressyellow-700 flex items-center justify-center text-2xl mb-6 shadow-inner">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Heavy Steel Barrier Exclusion</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Complete physical fortification using galvanized stainless steel mesh, copper weave, and chew-resistant silicone to seal entry points forever.
+                            </p>
+                        </div>
+
+                        <div class="glass-card p-8 rounded-3xl relative">
+                            <div class="w-14 h-14 rounded-2xl bg-expressyellow-100 text-expressyellow-700 flex items-center justify-center text-2xl mb-6 shadow-inner">
+                                <i class="fa-solid fa-sparkles"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Enzymatic Bio-Sanitization</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Organic misting that neutralizes rodent pheromone tracks, urine scent lines, and airborne bacterial pathogens to restore pure air.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Article Banner -->
+            <div class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-expressyellow-300 bg-gradient-to-br from-white via-expressyellow-50/50 to-amber-100/30 flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div class="space-y-4 max-w-2xl">
+                            <span class="px-3 py-1 rounded-full bg-expressyellow-500 text-slate-950 text-xs font-black uppercase tracking-wider">Featured Technical Handbook</span>
+                            <h3 class="text-2xl sm:text-3xl font-black text-slate-900">Toronto Winter Mice Infestation Prevention & Professional Elimination Guide</h3>
+                            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                Learn how urban winter freeze cycles drive mice into Toronto wall voids, how to spot hidden weep hole gaps, and how stainless steel exclusion keeps your family safe.
+                            </p>
+                        </div>
+                        <div class="shrink-0">
+                            <a href="#blog/toronto-winter-mice-infestation-prevention" class="inline-flex items-center px-7 py-4 rounded-full bg-slate-950 hover:bg-expressyellow-500 hover:text-slate-950 text-white font-black text-sm transition-all shadow-lg hover:shadow-expressyellow-500/30 whitespace-nowrap">
+                                Read Complete Guide <i class="fa-solid fa-book-open ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 2: SERVICES PAGE ================= -->
+        <section id="page-services" class="page-section hidden py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-extrabold tracking-widest uppercase text-expressyellow-700">Services & Solutions</span>
+                    <h1 class="text-3xl sm:text-5xl font-black text-slate-900 mt-2">Targeted Rodent Control Packages</h1>
+                    <p class="text-slate-600 mt-4 text-base">Customized rapid exclusion, humane extraction, and attic restoration tailored for Toronto single-family homes, townhouses, and commercial units.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Service 1 -->
+                    <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-expressyellow-500 text-slate-950 flex items-center justify-center text-xl mb-6 shadow-md shadow-expressyellow-500/30 font-bold">
+                                <i class="fa-solid fa-house-shield"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Residential Express Protection</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Fast-action interior mechanical trapping and exterior foundation inspection designed to clear indoor infestations without introducing chemical poisons into bedrooms or kitchens.
+                            </p>
+                            <ul class="space-y-2.5 text-xs font-semibold text-slate-700 mb-8">
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-expressyellow-600 mr-2.5"></i> Tamper-proof, child-safe mechanical traps</li>
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-expressyellow-600 mr-2.5"></i> Multi-point foundation leak diagnostic</li>
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-expressyellow-600 mr-2.5"></i> Indoor pheromone neutralization</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-expressyellow-100 text-expressyellow-900 hover:bg-expressyellow-500 hover:text-slate-950 font-bold text-sm transition-all">
+                            Book Residential Inspection
+                        </a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-expressyellow-500 text-slate-950 flex items-center justify-center text-xl mb-6 shadow-md shadow-expressyellow-500/30 font-bold">
+                                <i class="fa-solid fa-shield-virus"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Full Building Steel Exclusion</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Our signature permanent prevention service. We seal weep holes, utility line penetrations, rooflines, and foundation gaps using heavy galvanized stainless steel mesh.
+                            </p>
+                            <ul class="space-y-2.5 text-xs font-semibold text-slate-700 mb-8">
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-expressyellow-600 mr-2.5"></i> Custom stainless steel weep hole inserts</li>
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-expressyellow-600 mr-2.5"></i> Hydro pipe and A/C conduit sealing</li>
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-expressyellow-600 mr-2.5"></i> Garage threshold & door perimeter seals</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-expressyellow-100 text-expressyellow-900 hover:bg-expressyellow-500 hover:text-slate-950 font-bold text-sm transition-all">
+                            Request Exclusion Quote
+                        </a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-expressyellow-500 text-slate-950 flex items-center justify-center text-xl mb-6 shadow-md shadow-expressyellow-500/30 font-bold">
+                                <i class="fa-solid fa-broom-ball"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Attic Restoration & Bio-Fogging</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                HEPA vacuum removal of contaminated insulation, localized nest extraction, and plant-based enzymatic misting to eliminate dangerous airborne allergens and odors.
+                            </p>
+                            <ul class="space-y-2.5 text-xs font-semibold text-slate-700 mb-8">
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-expressyellow-600 mr-2.5"></i> HEPA air filtration & dropping removal</li>
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-expressyellow-600 mr-2.5"></i> Organic enzymatic disinfection spray</li>
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-expressyellow-600 mr-2.5"></i> Insulation thermal restoration</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-expressyellow-100 text-expressyellow-900 hover:bg-expressyellow-500 hover:text-slate-950 font-bold text-sm transition-all">
+                            Schedule Attic Audit
+                        </a>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-expressyellow-500 text-slate-950 flex items-center justify-center text-xl mb-6 shadow-md shadow-expressyellow-500/30 font-bold">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Commercial Food & Retail Shield</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Discrete off-hours pest defense programs for restaurants, grocery stores, property managers, and offices compliant with Toronto Health Department regulations.
+                            </p>
+                            <ul class="space-y-2.5 text-xs font-semibold text-slate-700 mb-8">
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-expressyellow-600 mr-2.5"></i> Off-hours discrete servicing</li>
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-expressyellow-600 mr-2.5"></i> Digital compliance logbook documentation</li>
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-expressyellow-600 mr-2.5"></i> Zero-chemical food-safe protocols</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-expressyellow-100 text-expressyellow-900 hover:bg-expressyellow-500 hover:text-slate-950 font-bold text-sm transition-all">
+                            Commercial Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 3: ABOUT US PAGE ================= -->
+        <section id="page-about" class="page-section hidden py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="space-y-6">
+                        <span class="text-xs font-extrabold tracking-widest uppercase text-expressyellow-700">About Toronto Mice Express</span>
+                        <h1 class="text-3xl sm:text-5xl font-black text-slate-900 leading-tight">Fast-Response Structural Pest Exclusion</h1>
+                        <p class="text-slate-600 leading-relaxed text-base">
+                            At **Toronto Mice Express**, we treat urban rodent control as an urgent structural engineering discipline. Founded to address the rapid rise of mouse intrusions across the Greater Toronto Area, our team replaces outdated poison baiting with permanent physical barriers.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-base">
+                            We specialize in identifying hidden building envelope gaps across Toronto's diverse architectural landscape—from historic brick homes in Cabbagetown to modern suburban builds in North York and Scarborough. By addressing the root structural vulnerabilities, we deliver permanent results backed by written warranties.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4 pt-4">
+                            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                                <i class="fa-solid fa-bolt text-2xl text-expressyellow-600 mb-2"></i>
+                                <h4 class="font-bold text-slate-900 text-sm">Express Service</h4>
+                                <p class="text-xs text-slate-500">Same-day inspection dispatch.</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                                <i class="fa-solid fa-leaf text-2xl text-expressyellow-600 mb-2"></i>
+                                <h4 class="font-bold text-slate-900 text-sm">Eco-Conscious</h4>
+                                <p class="text-xs text-slate-500">Non-toxic, safe solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-8 rounded-3xl border border-white relative shadow-xl">
+                        <div class="space-y-6">
+                            <h3 class="text-xl font-bold text-slate-900">Our Core Service Principles</h3>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-expressyellow-200 text-slate-950 flex items-center justify-center shrink-0 font-bold">1</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Exterior-First Exclusion</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Stopping rodents at the exterior perimeter is 100% more effective than indoor trapping alone.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-expressyellow-200 text-slate-950 flex items-center justify-center shrink-0 font-bold">2</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Family & Pet Safety</h4>
+                                    <p class="text-xs text-slate-600 mt-1">We eliminate the risk of open indoor poison blocks, keeping young children and domestic pets safe.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-expressyellow-200 text-slate-950 flex items-center justify-center shrink-0 font-bold">3</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Written Transferable Warranty</h4>
+                                    <p class="text-xs text-slate-600 mt-1">All our stainless steel exclusion work comes backed by complete long-term warranty protection.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 4: BLOG HUB ================= -->
+        <section id="page-blog" class="page-section hidden py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-extrabold tracking-widest uppercase text-expressyellow-700">Educational Resources</span>
+                    <h1 class="text-3xl sm:text-5xl font-black text-slate-900 mt-2">Pest Prevention & Technical Blog</h1>
+                    <p class="text-slate-600 mt-4 text-base">Expert advice on structural entry point identification, non-toxic rodent control, and winter building defense.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Featured Article Card -->
+                    <article class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between border border-expressyellow-300">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 text-xs font-bold text-expressyellow-800 mb-3">
+                                <span class="px-2.5 py-1 bg-expressyellow-200 rounded-md">Featured Handbook</span>
+                                <span>• 1,200+ Words</span>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-900 hover:text-expressyellow-700 transition-colors mb-3 leading-snug">
+                                <a href="#blog/toronto-winter-mice-infestation-prevention">Toronto Winter Mice Infestation Prevention & Professional Elimination Guide</a>
+                            </h2>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                                A comprehensive breakdown of winter rodent behavior, thermal heat leakage, weeping hole vulnerabilities, and permanent steel exclusion methods.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="#blog/toronto-winter-mice-infestation-prevention" class="inline-flex items-center text-sm font-bold text-expressyellow-800 hover:text-expressyellow-900">
+                                Read Complete Article <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 2 -->
+                    <article class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between opacity-90 hover:opacity-100 transition-opacity">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 text-xs font-semibold text-slate-500 mb-3">
+                                <span class="px-2.5 py-1 bg-slate-100 rounded-md">Structural Defense</span>
+                                <span>• 5 Min Read</span>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug">
+                                How Weep Holes in Brick Homes Become Rodent Highways
+                            </h2>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                                Why ventilation gaps in exterior brickwork invite mice during autumn months and how to shield them with stainless steel inserts.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="#blog/toronto-winter-mice-infestation-prevention" class="inline-flex items-center text-sm font-bold text-slate-700 hover:text-expressyellow-700">
+                                Read Article <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 3 -->
+                    <article class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between opacity-90 hover:opacity-100 transition-opacity">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 text-xs font-semibold text-slate-500 mb-3">
+                                <span class="px-2.5 py-1 bg-slate-100 rounded-md">Air Quality</span>
+                                <span>• 6 Min Read</span>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug">
+                                Cleaning Contaminated Attic Insulation After an Infestation
+                            </h2>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                                The risks of airborne rodent urine pathogens and how enzymatic fogging restores healthy indoor air quality for your family.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="#blog/toronto-winter-mice-infestation-prevention" class="inline-flex items-center text-sm font-bold text-slate-700 hover:text-expressyellow-700">
+                                Read Article <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 5: 1,200+ WORD SEO ARTICLE ================= -->
+        <section id="page-blog-article" class="page-section hidden py-12">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Article Header -->
+                <div class="mb-10 text-center sm:text-left">
+                    <a href="#blog" class="inline-flex items-center text-xs font-bold text-expressyellow-800 hover:text-expressyellow-900 mb-4">
+                        <i class="fa-solid fa-chevron-left mr-2"></i> Back to Articles Hub
+                    </a>
+                    <h1 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+                        Toronto Winter Mice Infestation Prevention & Professional Elimination Guide
+                    </h1>
+                    <div class="mt-4 flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs font-semibold text-slate-500 border-b border-slate-200 pb-6">
+                        <span><i class="fa-solid fa-user-shield text-expressyellow-600 mr-1"></i> Toronto Express Technical Division</span>
+                        <span>•</span>
+                        <span><i class="fa-solid fa-snowflake text-expressyellow-600 mr-1"></i> Winter Pest Defense</span>
+                        <span>•</span>
+                        <span><i class="fa-solid fa-clock text-expressyellow-600 mr-1"></i> 1,200+ Words</span>
+                    </div>
+                </div>
+
+                <!-- Article Body Content -->
+                <article class="prose prose-slate max-w-none glass-panel p-8 sm:p-12 rounded-3xl border border-white shadow-xl space-y-8 text-slate-700 leading-relaxed text-base">
+                    
+                    <!-- Paragraph 1 -->
+                    <p class="text-lg text-slate-800 leading-relaxed font-normal">
+                        As winter temperature drops sweep across the Greater Toronto Area, urban house mice (*Mus musculus*) undergo a dramatic shift in survival behavior. During spring and summer, rodent populations thrive in outdoor gardens, ravines, and parklands where food sources are abundant. However, when ground frost sets in and natural food disappears, mice actively seek warm, sheltered microclimates inside human residential and commercial structures. Understanding how cold weather accelerates rodent intrusions is essential for every Toronto homeowner looking to safeguard their property envelope.
+                    </p>
+
+                    <!-- Paragraph 2 with MANDATORY SINGLE BACKLINK -->
+                    <p>
+                        When facing an active indoor infestation, relying solely on basic hardware store traps or poison packets yields disappointing, short-term results. Mice are prolific breeders capable of producing up to ten litters annually, meaning a minor nesting group inside wall voids can explode into a major infestation within weeks. Protecting your home requires an engineering-based approach implemented by specialists in professional <a href="https://saniiq.com/mice-control-toronto/" class="text-expressyellow-700 font-bold hover:underline">Mice Control in Toronto</a> who utilize permanent stainless steel physical exclusion rather than temporary chemical baiting.
+                    </p>
+
+                    <h2 class="text-2xl font-black text-slate-900 pt-4 border-t border-slate-200">
+                        1. The Anatomy of a Toronto Winter Mouse Inturision
+                    </h2>
+
+                    <p>
+                        To effectively keep mice out of urban buildings during severe winter months, it is necessary to examine how rodents interact with residential architecture. House mice are extraordinarily adaptable mammals equipped with anatomical features specifically suited for structural invasion:
+                    </p>
+
+                    <ul class="list-disc pl-6 space-y-2.5">
+                        <li><strong>Flexible Skeletal Compression:</strong> A full-grown mouse can compress its ribcage to squeeze through openings as tiny as 6 millimeters (1/4 inch)—roughly the width of a standard pencil eraser.</li>
+                        <li><strong>Incessant Gnawing Impulse:</strong> Rodent incisors grow continuously at a rate of 4 to 5 inches per year. To prevent their teeth from overgrowing, mice constantly chew through softwood framing, plastic PVC drainage pipes, and flexible electrical conduit.</li>
+                        <li><strong>Scent-Guided Runway Systems:</strong> Mice possess poor eyesight but an exceptionally keen sense of smell. They mark indoor routes with pheromone-laden urine droplets, creating invisible odor trails that guide other mice directly from outside into your warm insulation.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-slate-800">Critical Structural Weak Points in GTA Architecture</h3>
+                    <p>
+                        Toronto features a diverse blend of architectural styles, each presenting unique structural vulnerabilities during the winter freeze:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Masonry Weep Holes:</strong> Unprotected ventilation gaps in exterior brick walls provide an open gateway directly into wall cavity insulation.</li>
+                        <li><strong>Gas & Hydro Line Penetrations:</strong> Oversized utility drill holes on exterior siding allow mice direct access to basement ceiling voids.</li>
+                        <li><strong>Garage Door Corner Seals:</strong> Rubber weather stripping along garage doors degrades over time, creating floor-level gaps that invite mice into warm garage spaces.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-black text-slate-900 pt-4 border-t border-slate-200">
+                        2. Health Risks, Airborne Allergens, and Property Safety
+                    </h2>
+
+                    <p>
+                        Allowing mice to inhabit wall cavities or attic insulation introduces serious health and safety hazards into your living environment. Overlooking an active infestation leads to several major risks:
+                    </p>
+
+                    <h3 class="text-xl font-bold text-slate-800">Airborne Biological Contamination</h3>
+                    <p>
+                        A single mouse deposits anywhere from 50 to 100 droppings every 24 hours while continually depositing urine micro-droplets along its path. As urine dries, microscopic protein particles enter home air currents through forced-air heating registers. These airborne allergens are known triggers for chronic asthma attacks and severe allergic reactions in children and sensitive adults.
+                    </p>
+
+                    <h3 class="text-xl font-bold text-slate-800">Electrical Hazard Hazards Behind Drywall</h3>
+                    <p>
+                        When mice nest in ceiling voids or behind kitchen appliances, they frequently strip protective plastic insulation off electrical wiring. Exposing live electrical wires inside wall cavities creates concealed short-circuit hazards that pose a real fire risk to residential homes.
+                    </p>
+
+                    <h2 class="text-2xl font-black text-slate-900 pt-4 border-t border-slate-200">
+                        3. The Flaws of Chemical Poisons in Modern Homes
+                    </h2>
+
+                    <p>
+                        Chemical rodenticides and poison blocks are widely available, but they are increasingly recognized as an inferior long-term defense strategy for urban homes:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+                        <div class="p-4 rounded-2xl bg-expressyellow-50/80 border border-expressyellow-200">
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Domestic Poison Exposure</h4>
+                            <p class="text-xs text-slate-600">Open chemical baits create secondary ingestion hazards for curious dogs, cats, and young children.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-expressyellow-50/80 border border-expressyellow-200">
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Inaccessible Wall Odors</h4>
+                            <p class="text-xs text-slate-600">Poisoned rodents frequently crawl deep inside inaccessible wall voids to die, creating foul decomposition odors.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-expressyellow-50/80 border border-expressyellow-200">
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">No Exterior Prevention</h4>
+                            <p class="text-xs text-slate-600">Chemicals fail to block building gaps. New mice will continue invading from outside indefinitely.</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-black text-slate-900 pt-4 border-t border-slate-200">
+                        4. The Toronto Mice Express 4-Step Exclusion Methodology
+                    </h2>
+
+                    <p>
+                        Toronto Mice Express employs an engineering-first Integrated Pest Management (IPM) model designed to clear existing indoor populations and permanently fortify your building envelope:
+                    </p>
+
+                    <h3 class="text-xl font-bold text-slate-800">Step 1: Infrared Thermal Audit</h3>
+                    <p>
+                        Our licensed technicians inspect your home’s perimeter using thermal infrared imaging tools to locate hidden air leaks, wall warmth pockets, and concealed entry breaches.
+                    </p>
+
+                    <h3 class="text-xl font-bold text-slate-800">Step 2: Non-Toxic Indoor Trapping</h3>
+                    <p>
+                        We deploy child-safe, tamper-resistant mechanical capture stations along active runway pathways inside basements, utility rooms, and attics to eliminate indoor mice quickly without using poisons.
+                    </p>
+
+                    <h3 class="text-xl font-bold text-slate-800">Step 3: Permanent Stainless Steel Exclusion</h3>
+                    <p>
+                        Every gap, crack, or hole exceeding 6mm is sealed using heavy galvanized stainless steel mesh, copper mesh weave, chew-proof silicone sealants, and custom metal flashings that rodents cannot chew through.
+                    </p>
+
+                    <h3 class="text-xl font-bold text-slate-800">Step 4: Enzymatic Bio-Sanitization</h3>
+                    <p>
+                        Impacted attic and crawlspace zones undergo targeted organic enzymatic misting to eliminate dangerous pathogens, break down droppings safely, and erase pheromone scent tracks.
+                    </p>
+
+                    <!-- Article Conclusion Box -->
+                    <div class="mt-12 p-8 rounded-3xl bg-gradient-to-r from-expressyellow-100/80 to-amber-100/50 border border-expressyellow-300">
+                        <h2 class="text-2xl font-black text-slate-900 mb-3">Conclusion</h2>
+                        <p class="text-slate-800 text-base leading-relaxed">
+                            Winter rodent intrusions in Toronto do not have to become a recurring headache for your family. By choosing a permanent physical exclusion solution based on thermal diagnostics, mechanical trapping, stainless steel sealing, and bio-sanitization, you can protect your property value and ensure a safe, healthy indoor environment year-round. Don't wait for mice to establish winter nests—fortify your building envelope today.
+                        </p>
+                    </div>
+
+                    <!-- Article FAQ Accordion -->
+                    <div class="mt-12 pt-8 border-t border-slate-200">
+                        <h2 class="text-2xl font-black text-slate-900 mb-6">Frequently Asked Questions (FAQ)</h2>
+                        
+                        <div class="space-y-4" id="faqAccordion">
+                            <!-- FAQ Item 1 -->
+                            <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white">
+                                <button class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition-colors accordion-toggle">
+                                    <span>How does stainless steel exclusion compare to standard chemical baiting?</span>
+                                    <i class="fa-solid fa-chevron-down text-expressyellow-600 transition-transform"></i>
+                                </button>
+                                <div class="accordion-content px-5 pb-5 text-sm text-slate-600">
+                                    Chemical baiting only temporarily reduces indoor numbers while leaving entry holes wide open. Stainless steel exclusion physically seals all entry points, creating a permanent barrier that rodents cannot chew through.
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 2 -->
+                            <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white">
+                                <button class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition-colors accordion-toggle">
+                                    <span>Are your trapping devices safe for homes with pets and toddlers?</span>
+                                    <i class="fa-solid fa-chevron-down text-expressyellow-600 transition-transform"></i>
+                                </button>
+                                <div class="accordion-content px-5 pb-5 text-sm text-slate-600">
+                                    Yes, 100%. We utilize tamper-resistant, double-locked mechanical capture stations placed strictly in low-traffic areas away from children and household pets.
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 3 -->
+                            <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white">
+                                <button class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition-colors accordion-toggle">
+                                    <span>Does your exclusion service include a written warranty?</span>
+                                    <i class="fa-solid fa-chevron-down text-expressyellow-600 transition-transform"></i>
+                                </button>
+                                <div class="accordion-content px-5 pb-5 text-sm text-slate-600">
+                                    Yes! All full-home exclusion services performed by Toronto Mice Express include a written transferable service warranty. If rodents manage to breach a sealed zone during the warranty period, we return to re-seal it at no extra cost.
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 4 -->
+                            <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white">
+                                <button class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition-colors accordion-toggle">
+                                    <span>How quickly can your technician arrive at my property?</span>
+                                    <i class="fa-solid fa-chevron-down text-expressyellow-600 transition-transform"></i>
+                                </button>
+                                <div class="accordion-content px-5 pb-5 text-sm text-slate-600">
+                                    We prioritize emergency cases across the Greater Toronto Area with express same-day or 24-hour priority dispatch. Submissions made via our contact portal are reviewed immediately.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 6: PRIVACY CONTACT FORM ================= -->
+        <section id="page-contact" class="page-section hidden py-12">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-extrabold tracking-widest uppercase text-expressyellow-700">Client Contact Portal</span>
+                    <h1 class="text-3xl sm:text-4xl font-black text-slate-900 mt-2">Request Express Inspection</h1>
+                    <p class="text-slate-600 mt-3 text-sm sm:text-base">
+                        Submit your property details below for instant technical review. Your information is securely handled and used strictly to dispatch our inspection team.
+                    </p>
+                </div>
+
+                <!-- Contact Form Card -->
+                <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-white shadow-2xl relative">
+                    <form id="expressContactForm" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="clientName" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Full Name *</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+                                        <i class="fa-solid fa-user text-sm"></i>
+                                    </span>
+                                    <input type="text" id="clientName" required placeholder="Sarah Jenkins" class="w-full pl-10 pr-4 py-3 bg-white/90 border border-slate-200 rounded-xl focus:ring-2 focus:ring-expressyellow-500 focus:border-expressyellow-500 text-sm font-medium outline-none transition-all">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="clientEmail" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Email Address *</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+                                        <i class="fa-solid fa-envelope text-sm"></i>
+                                    </span>
+                                    <input type="email" id="clientEmail" required placeholder="sarah@example.com" class="w-full pl-10 pr-4 py-3 bg-white/90 border border-slate-200 rounded-xl focus:ring-2 focus:ring-expressyellow-500 focus:border-expressyellow-500 text-sm font-medium outline-none transition-all">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="clientPhone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Phone Number *</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+                                        <i class="fa-solid fa-phone text-sm"></i>
+                                    </span>
+                                    <input type="tel" id="clientPhone" required placeholder="(416) 555-0148" class="w-full pl-10 pr-4 py-3 bg-white/90 border border-slate-200 rounded-xl focus:ring-2 focus:ring-expressyellow-500 focus:border-expressyellow-500 text-sm font-medium outline-none transition-all">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="serviceType" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Service Required</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+                                        <i class="fa-solid fa-list-check text-sm"></i>
+                                    </span>
+                                    <select id="serviceType" class="w-full pl-10 pr-4 py-3 bg-white/90 border border-slate-200 rounded-xl focus:ring-2 focus:ring-expressyellow-500 focus:border-expressyellow-500 text-sm font-medium outline-none transition-all">
+                                        <option value="Residential Express Protection">Residential Express Protection</option>
+                                        <option value="Full Building Steel Exclusion">Full Building Steel Exclusion</option>
+                                        <option value="Attic Cleaning & Bio-Fogging">Attic Cleaning & Bio-Fogging</option>
+                                        <option value="Commercial Food & Retail Shield">Commercial Food & Retail Shield</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="clientAddress" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Postal Code / Neighbourhood *</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+                                    <i class="fa-solid fa-location-dot text-sm"></i>
+                                </span>
+                                <input type="text" id="clientAddress" required placeholder="e.g. M4B 1B3, North York" class="w-full pl-10 pr-4 py-3 bg-white/90 border border-slate-200 rounded-xl focus:ring-2 focus:ring-expressyellow-500 focus:border-expressyellow-500 text-sm font-medium outline-none transition-all">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="clientMessage" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Property Details & Notes *</label>
+                            <textarea id="clientMessage" rows="4" required placeholder="Describe observed rodent activity, specific room locations, or home structural details..." class="w-full p-4 bg-white/90 border border-slate-200 rounded-xl focus:ring-2 focus:ring-expressyellow-500 focus:border-expressyellow-500 text-sm font-medium outline-none transition-all"></textarea>
+                        </div>
+
+                        <div class="pt-2">
+                            <button type="submit" class="w-full py-4 px-8 rounded-xl bg-expressyellow-500 hover:bg-expressyellow-600 text-slate-950 font-black text-base shadow-lg shadow-expressyellow-500/30 transition-all duration-300 transform active:scale-95">
+                                Submit Inspection Request <i class="fa-solid fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+
+                        <p class="text-center text-xs text-slate-400">
+                            <i class="fa-solid fa-lock mr-1"></i> Customer privacy guaranteed. Submissions route directly to local GTA field dispatchers.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Custom Client Success Modal -->
+    <div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="glass-panel max-w-md w-full p-8 rounded-3xl text-center space-y-4 border border-white shadow-2xl">
+            <div class="w-16 h-16 bg-expressyellow-100 text-expressyellow-700 rounded-full flex items-center justify-center mx-auto text-2xl shadow-inner font-bold">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-black text-slate-900">Request Received!</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+                Thank you! Your inspection request has been logged. A Toronto Mice Express technician will review your details and contact you shortly.
+            </p>
+            <button onclick="closeModal()" class="w-full py-3.5 bg-expressyellow-500 hover:bg-expressyellow-600 text-slate-950 font-black text-sm rounded-xl transition-all shadow-md">
+                Acknowledge & Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 text-xs py-12 border-t border-slate-900 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-xl bg-expressyellow-500 flex items-center justify-center text-slate-950 font-bold">
+                        <i class="fa-solid fa-bolt text-sm"></i>
+                    </div>
+                    <span class="font-black text-base text-white">Toronto Mice Express</span>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-6 font-semibold text-slate-300">
+                    <a href="#home" class="hover:text-expressyellow-400 transition-colors">Home</a>
+                    <a href="#services" class="hover:text-expressyellow-400 transition-colors">Services</a>
+                    <a href="#about" class="hover:text-expressyellow-400 transition-colors">About Us</a>
+                    <a href="#blog" class="hover:text-expressyellow-400 transition-colors">Blog</a>
+                    <a href="#blog/toronto-winter-mice-infestation-prevention" class="hover:text-expressyellow-400 transition-colors">Winter Prevention Guide</a>
+                    <a href="#contact" class="hover:text-expressyellow-400 transition-colors">Client Portal</a>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-900 pt-8 flex flex-col sm:flex-row justify-between items-center text-slate-500 gap-4">
+                <p>&copy; 2026 Toronto Mice Express. All rights reserved. Rapid structural rodent exclusion across the Greater Toronto Area.</p>
+                <div class="flex space-x-4">
+                    <span class="hover:text-slate-400 cursor-pointer">Privacy Policy</span>
+                    <span>•</span>
+                    <span class="hover:text-slate-400 cursor-pointer">Terms of Service</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Navigation & Interaction Scripts -->
+    <script>
+        // SPA Hash Router Mapping
+        const routes = {
+            '': 'page-home',
+            'home': 'page-home',
+            'services': 'page-services',
+            'about': 'page-about',
+            'blog': 'page-blog',
+            'blog/toronto-winter-mice-infestation-prevention': 'page-blog-article',
+            'contact': 'page-contact'
+        };
+
+        function navigate() {
+            let hash = window.location.hash.replace('#', '').trim();
+            let pageId = routes[hash] || 'page-home';
+
+            // Hide all sections
+            document.querySelectorAll('.page-section').forEach(sec => {
+                sec.classList.add('hidden');
+            });
+
+            // Show active section
+            const activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.classList.remove('hidden');
+            }
+
+            // Smooth scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Update Active Header Links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                const linkHash = link.getAttribute('href').replace('#', '');
+                if (linkHash === hash || (hash === '' && linkHash === 'home')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            // Close Mobile Menu if open
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        }
+
+        window.addEventListener('hashchange', navigate);
+        window.addEventListener('load', navigate);
+
+        // Mobile Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Accordion Interactions
+        document.querySelectorAll('.accordion-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('active');
+                if (icon) {
+                    icon.classList.toggle('rotate-180');
+                }
+            });
+        });
+
+        // Contact Form Submission Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const modal = document.getElementById('successModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                }, 10);
+            }
+            document.getElementById('expressContactForm').reset();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            if (modal) {
+                modal.classList.add('opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+        }
+    </script>
+</body>
+</html>
